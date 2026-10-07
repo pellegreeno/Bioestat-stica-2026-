@@ -1,40 +1,69 @@
-#### Probabilidade e Estatística Aplicada à Biologia: Variáveis Aleatórias e Modelos Probabilísticos
+# Bioestatística – Tarefa 13
 
-#### \-Integrantes do Grupo
+## Integrantes
+- Ana Carolina Sartori – 17081013
+- Cris Serpa Guimarães – 16860671
+- Julia Sztejnhaus Pamio – 17072621
+- Maria Eduarda Pellegrino – 17074112
 
-* Ana Carolina Santos Sartori 17081013	
-* Cris Petronetto Serpa Guimarães 16860671
-* Julia Sztejnhaus Pamio 17072621
-* Maria Eduarda Veloso Pellegrino 17074112
+---
 
-#### Objetivo do Notebook
-Apresentar e exemplificar conceitos introdutórios de Probabilidade aplicados à Biologia, explorando variáveis aleatórias (discretas e contínuas) e os modelos probabilísticos de Bernoulli, Binomial e Poisson, utilizando simulações computacionais em Python.
+## Fontes consultadas
 
-#### Conteúdos Abordados
-1. Definição de Variável Aleatória.
-2. Distinção entre Variáveis Discretas e Contínuas com exemplos biológicos.
-3. Modelo de Bernoulli (Surgimento de resistência a antibióticos em bactérias).
-4. Modelo Binomial (Germinação de sementes de espécies nativas).
-5. Modelo de Poisson (Ocorrência de espécies em parcelas de amostragem ecológica).
-6. Tabela Comparativa dos Modelos Probabilísticos.
+### Base de dados
+**Iris Dataset – UCI Machine Learning Repository**  
+A base utilizada contém medidas de comprimento e largura das sépalas e pétalas de flores do gênero *Iris*, além da identificação da espécie.
 
-#### Contexto Biológico
-Os exemplos simulam cenários reais de ecologia vegetal, microbiologia e monitoramento de biodiversidade.
+- **Link:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/53/iris)
+- **Data de acesso:** 05/10/2026
 
-#### Instruções para Execução
-1. Acesse o notebook através do Google Colab ou faça o download do arquivo `.ipynb`.
-2. Certifique-se de possuir as bibliotecas necessárias instaladas (`numpy`, `pandas`, `matplotlib`, `seaborn`, `scipy`).
-3. Execute as células sequencialmente do início ao fim.
+### Referências bibliográficas
+- BUSSAB, W. O.; MORETTIN, P. A. **Estatística Básica**. Saraiva Educação, 2017.
+- MORETTIN, P. A. **Estatística e Ciências do Comportamento**. Editora Edgard Blücher, 2010.
+- TRIOLA, M. F. **Introdução à Estatística**. LTC, 2018.
+- ZAR, J. H. **Biostatistical Analysis**. Pearson, 2010.
 
-#### Bibliotecas Utilizadas
-* `numpy` (versão padrão)
-* `matplotlib` e `seaborn` (para visualização de dados)
-* `scipy.stats` (para distribuições estatísticas)
+---
 
-#### Dados Utilizados
-Para fins didáticos e de reprodutibilidade, este trabalho utiliza dados simulados gerados computacionalmente a partir de parâmetros biologicamente plausíveis descritos em literatura especializada de ecologia e genética.
+## Como Reproduzir a Análise
 
-#### Referências Bibliográficas
-* MAGALHÃES, Marcos Nascimento; LIMA, Antonio Carlos Pedroso de. Noções de Probabilidade e Estatística. São Paulo: EDUSP, 2015.
-* GOTELLI, Nicholas J. A Primer of Ecology. 4. ed. Sunderland: Sinauer Associates, 2008.
-* ROSS, Sheldon. A First Course in Probability. 8. ed. Pearson, 2010.
+A análise foi realizada em **Python**, utilizando o **Google Colab**.
+
+### 1. Acessar o código
+Abra o notebook disponibilizado neste repositório no Google Colab.
+
+### 2. Importar as bibliotecas
+As bibliotecas utilizadas são:
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
+- `scipy`
+
+*As bibliotecas podem ser importadas diretamente no Google Colab, sem necessidade de instalação adicional.*
+
+### 3. Carregar os dados
+O dataset Iris é carregado diretamente da base da UCI por meio da URL:
+> `https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data`
+
+O código organiza as cinco colunas da base como:
+- `sepal_length`
+- `sepal_width`
+- `petal_length`
+- `petal_width`
+- `class`
+
+### 4. Executar o notebook
+Execute as células do notebook na ordem em que aparecem. A análise inclui:
+- Exploração inicial e estatísticas descritivas dos dados;
+- Teste F de Fisher para comparação das variâncias entre *Iris-versicolor* e *Iris-virginica*;
+- Teste t de Student para comparação das médias do comprimento das pétalas;
+- Cálculos de probabilidade utilizando a distribuição Normal;
+- Teste de normalidade utilizando a distribuição Qui-quadrado;
+- Estudo e representação gráfica das distribuições Normal, t de Student, Qui-quadrado e F de Fisher;
+- Cálculos de probabilidades acumuladas, intervalos, probabilidades de cauda e percentis para as quatro distribuições.
+
+### 5. Reprodução dos resultados
+Após executar todas as células, os resultados estatísticos, probabilidades e gráficos serão produzidos diretamente no notebook. 
+
+> **Nota:** Não é necessário realizar download ou tratamento manual do dataset, pois os dados são carregados diretamente da fonte utilizada na análise.
